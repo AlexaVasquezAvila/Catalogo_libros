@@ -1,1 +1,15 @@
-<p>detalle works!</p>
+<h2>Detalle del Libro</h2>
+
+<!-- Solo mostramos información si ya la cargamos -->
+<div *ngIf="detalleLibro">
+  <p><strong>Título:</strong> {{ detalleLibro.title }}</p>
+
+  <!-- Algunas obras tienen "description" como string o como objeto con "value" -->
+  <p *ngIf="detalleLibro.description">
+    <strong>Descripción:</strong>
+    {{ detalleLibro.description.value || detalleLibro.description }}
+  </p>
+
+  <!-- Agrega más campos según lo que devuelva la API -->
+  <!-- Por ejemplo, detalleLibro.subjects, detalleLibro.covers, etc. -->
+</div>

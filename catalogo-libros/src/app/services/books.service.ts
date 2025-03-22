@@ -22,9 +22,9 @@ export class BooksService {
   }
 
   // Método para obtener detalle de un libro (work) por su ID
-  obtenerDetalle(idObra: string): Observable<any> {
+  obtenerDetalle(keyObra: string): Observable<any> {
     // Ejemplo: https://openlibrary.org/works/OL82563W.json
-    const url = `${this.baseUrl}${idObra}.json`;
+    const url = `${this.baseUrl}${keyObra}.json`;
     return this.http.get(url);
   }
 }
