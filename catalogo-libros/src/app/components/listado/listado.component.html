@@ -1,14 +1,16 @@
 <h2>Listado de Libros</h2>
-<ul>
-  <li *ngFor="let libro of libros">
-    <span>
+<ul class="list-group">
+  <li
+    class="list-group-item d-flex justify-content-between align-items-center"
+    *ngFor="let libro of libros"
+  >
+    <!-- Título enlazado al detalle -->
+    <a [routerLink]="['/detalle', libro.key]" class="text-decoration-none">
       {{ libro.title }} - {{ libro.author_name?.[0] }}
-    </span>
-    <!-- Botón para agregar a favoritos -->
-    <button (click)="agregarAFavoritos(libro)">Agregar a Favoritos</button>
-    <!-- Enlace a detalle -->
-    <a [routerLink]="['/detalle', libro.key]">
-      Ver Detalle
     </a>
+
+    <button class="btn btn-sm btn-success" (click)="agregarAFavoritos(libro)">
+      Favorito
+    </button>
   </li>
 </ul>

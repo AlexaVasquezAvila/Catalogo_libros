@@ -1,15 +1,16 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterModule } from '@angular/router';
 
 @Component({
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet,
+            RouterModule    
+  ],
   selector: 'app-root',
   template: `
     <h1>Mi Catálogo de Libros</h1>
     <nav>
-      <a routerLink="/busqueda">Búsqueda</a> |
-      <a routerLink="/listado">Listado</a>
+      <a routerLink="/busqueda">Inicio</a>
     </nav>
     <hr />
     <!-- Aquí se mostrarán los componentes según la ruta -->

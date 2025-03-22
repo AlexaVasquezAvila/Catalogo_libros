@@ -1,7 +1,14 @@
-<h2>Búsqueda de Libros</h2>
-<input
-  type="text"
-  [(ngModel)]="terminoBusqueda"
-  placeholder="Ingresa título o autor"
-/>
-<button (click)="buscar()">Buscar</button>
+<div class="container my-4">
+  <h2>Búsqueda de Libros</h2>
+  <div class="row">
+    <div class="col-md-6">
+      <input
+        class="form-control mb-2"
+        type="text"
+        [(ngModel)]="terminoBusqueda"
+        placeholder="Ingresa título o autor"
+      />
+      <button class="btn btn-primary" (click)="buscar()">Buscar</button>
+    </div>
+  </div>
+</div>
