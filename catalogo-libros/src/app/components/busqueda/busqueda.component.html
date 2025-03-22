@@ -1,1 +1,7 @@
-<p>busqueda works!</p>
+<h2>Búsqueda de Libros</h2>
+<input
+  type="text"
+  [(ngModel)]="terminoBusqueda"
+  placeholder="Ingresa título o autor"
+/>
+<button (click)="buscar()">Buscar</button>
