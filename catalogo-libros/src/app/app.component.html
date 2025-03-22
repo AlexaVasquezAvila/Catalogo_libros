@@ -1,0 +1,15 @@
+<!-- app.component.html (Versión mínima) -->
+
+<h1>{{ title }}</h1>
+
+<!-- Barra de navegación para tus rutas -->
+<nav>
+  <a routerLink="/busqueda">Búsqueda</a> |
+  <a routerLink="/listado">Listado</a> |
+  <a routerLink="/favoritos">Favoritos</a>
+</nav>
+
+<hr />
+
+<!-- Aquí se renderizan los componentes según la ruta -->
+<router-outlet></router-outlet>
