@@ -1,11 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { BooksService } from '../../services/books.service';
 
 @Component({
+  standalone: true,
+  imports: [CommonModule],
   selector: 'app-favoritos',
-  imports: [],
   templateUrl: './favoritos.component.html',
-  styleUrl: './favoritos.component.css'
 })
-export class FavoritosComponent {
+export class FavoritosComponent implements OnInit {
+
+  favoritos: any[] = [];
+
+  constructor(private booksService: BooksService) {}
+
+  ngOnInit(): void {
+    // Al iniciar, cargamos la lista de favoritos del servicio
+    this.favoritos = this.booksService.favoritos;
+  }
 
 }

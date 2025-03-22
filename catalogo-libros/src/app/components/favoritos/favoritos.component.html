@@ -1,1 +1,7 @@
-<p>favoritos works!</p>
+<h2>Mis Libros Favoritos</h2>
+
+<ul>
+  <li *ngFor="let libro of favoritos">
+    {{ libro.title }} - {{ libro.author_name?.[0] }}
+  </li>
+</ul>

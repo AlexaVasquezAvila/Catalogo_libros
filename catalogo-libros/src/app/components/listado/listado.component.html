@@ -1,9 +1,14 @@
 <h2>Listado de Libros</h2>
 <ul>
   <li *ngFor="let libro of libros">
-    <!-- Ejemplo: libro.key = "/works/OL82563W" -->
-    <a [routerLink]="['/detalle', libro.key]">
+    <span>
       {{ libro.title }} - {{ libro.author_name?.[0] }}
+    </span>
+    <!-- Botón para agregar a favoritos -->
+    <button (click)="agregarAFavoritos(libro)">Agregar a Favoritos</button>
+    <!-- Enlace a detalle -->
+    <a [routerLink]="['/detalle', libro.key]">
+      Ver Detalle
     </a>
   </li>
 </ul>

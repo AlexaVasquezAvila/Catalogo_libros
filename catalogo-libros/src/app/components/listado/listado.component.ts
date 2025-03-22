@@ -20,4 +20,9 @@ export class ListadoComponent implements OnInit {
   ngOnInit() {
     this.libros = this.booksService.resultados;
   }
+
+  agregarAFavoritos(libro: any) {
+    this.booksService.agregarAFavoritos(libro);
+    // Puedes mostrar un mensaje de confirmación si gustas
+  }
 }

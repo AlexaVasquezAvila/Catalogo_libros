@@ -6,12 +6,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class BooksService {
-
-   // Declara aquí la propiedad resultados
-   resultados: any[] = [];
-
   private baseUrl = 'https://openlibrary.org';
 
+  // Declara aquí la propiedad resultados
+  resultados: any[] = [];
+  favoritos: any[] = [];
+  
   constructor(private http: HttpClient) {}
 
   // Método para buscar libros según un término
@@ -26,5 +26,13 @@ export class BooksService {
     // Ejemplo: https://openlibrary.org/works/OL82563W.json
     const url = `${this.baseUrl}${keyObra}.json`;
     return this.http.get(url);
+  }
+
+  // Método para agregar un libro a la lista de favoritos
+  agregarAFavoritos(libro: any) {
+    const existe = this.favoritos.some(fav => fav.key === libro.key);
+    if (!existe) {
+      this.favoritos.push(libro);
+    }
   }
 }
