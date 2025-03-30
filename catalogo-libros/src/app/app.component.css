@@ -1,0 +1,13 @@
+.layout-principal {
+    background-color: #0bd2ec;
+    min-height: 100vh;
+    padding: 2rem;
+  }
+  
+  .titulo-principal {
+    font-family: 'Georgia', serif;
+    font-size: 2.8rem;
+    color: #3c3b6e;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  }
+  

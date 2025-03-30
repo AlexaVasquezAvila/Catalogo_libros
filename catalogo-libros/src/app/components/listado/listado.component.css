@@ -1,0 +1,64 @@
+.titulo-seccion {
+    color: white;
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .list-group {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .libro-item {
+    padding: 1rem;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .libro-item:hover {
+    background-color: #f1f5f9;
+  }
+  
+  .titulo-libro {
+    color: #1e3c72;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  
+  .titulo-libro:hover {
+    text-decoration: underline;
+    color: #0f1b3f;
+  }
+  
+  .boton-favorito {
+    background-color: #198754;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 5px 15px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .boton-favorito:hover {
+    background-color: #146c43;
+  }
+  
+
+  .listado-libros {
+    background-color: rgba(255, 255, 255, 0.8) !important; /* Fondo azul oscuro translúcido */
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+  }
+  
+  .listado-libros .list-group-item {
+    background-color: transparent !important;
+    border: none;
+    color: white;
+  }
+  

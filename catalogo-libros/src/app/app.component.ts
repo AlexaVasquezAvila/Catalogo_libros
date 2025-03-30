@@ -3,18 +3,17 @@ import { RouterOutlet, RouterModule } from '@angular/router';
 
 @Component({
   standalone: true,
-  imports: [RouterOutlet,
-            RouterModule    
-  ],
+  imports: [RouterOutlet, RouterModule],
   selector: 'app-root',
   template: `
-    <h1>Mi Catálogo de Libros</h1>
-    <nav>
-      <a routerLink="/busqueda">Inicio</a>
-    </nav>
-    <hr />
-    <!-- Aquí se mostrarán los componentes según la ruta -->
-    <router-outlet></router-outlet>
+    <div class="layout-principal text-center py-4">
+      <h1 class="titulo-principal">🧭 Compendio de Tesoros Literarios</h1>
+      <nav class="mb-3">
+        <a class="btn btn-busqueda" routerLink="/busqueda">🏠 Ir a Búsqueda</a>
+      </nav>
+      <hr />
+      <router-outlet></router-outlet>
+    </div>
   `
 })
 export class AppComponent {}

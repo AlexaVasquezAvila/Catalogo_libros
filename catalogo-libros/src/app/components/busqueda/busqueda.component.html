@@ -1,14 +1,17 @@
-<div class="container my-4">
-  <h2>Búsqueda de Libros</h2>
-  <div class="row">
+<div class="container my-5">
+  <h2 class="subtitulo-busqueda">📚 Búsqueda de Libros</h2>
+
+  <div class="row justify-content-center">
     <div class="col-md-6">
-      <input
-        class="form-control mb-2"
-        type="text"
-        [(ngModel)]="terminoBusqueda"
-        placeholder="Ingresa título o autor"
-      />
-      <button class="btn btn-primary" (click)="buscar()">Buscar</button>
+      <div class="card shadow p-4">
+        <input
+          class="form-control mb-3"
+          type="text"
+          [(ngModel)]="terminoBusqueda"
+          placeholder="Ingresa título o autor"
+        />
+        <button class="btn btn-primary w-100" (click)="buscar()">Buscar</button>
+      </div>
     </div>
   </div>
 </div>
