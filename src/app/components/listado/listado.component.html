@@ -1,0 +1,22 @@
+<h2 class="titulo-seccion">📚 Listado de Libros</h2>
+<ul class="list-group shadow-lg rounded">
+  <li
+    class="list-group-item d-flex justify-content-between align-items-center libro-item"
+    *ngFor="let libro of libros"
+  >
+    <div>
+      <strong>{{ libro.titulo }}</strong> - {{ libro.autor }}<br />
+      <small
+        >📚 {{ libro.genero || "Sin género" }} | 🗓️
+        {{ libro.anio_publicacion || "Desconocido" }}</small
+      >
+    </div>
+
+    <button
+      class="btn btn-sm btn-outline-light boton-favorito"
+      (click)="agregarAFavoritos(libro)"
+    >
+      💚 Favorito
+    </button>
+  </li>
+</ul>

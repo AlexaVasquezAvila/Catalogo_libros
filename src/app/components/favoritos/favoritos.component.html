@@ -1,0 +1,25 @@
+<h2>⭐ Libros Favoritos</h2>
+
+<form (submit)="crearFavorito()" style="margin-bottom: 20px">
+  <input
+    type="number"
+    [(ngModel)]="nuevoFavorito.usuario_id"
+    name="usuario_id"
+    placeholder="ID Usuario"
+    required
+  />
+  <input
+    type="number"
+    [(ngModel)]="nuevoFavorito.libro_id"
+    name="libro_id"
+    placeholder="ID Libro"
+    required
+  />
+  <button type="submit">Agregar a Favoritos</button>
+</form>
+
+<ul>
+  <li *ngFor="let fav of favoritos">
+    Usuario ID: {{ fav.usuario_id }} | Libro ID: {{ fav.libro_id }}
+  </li>
+</ul>
